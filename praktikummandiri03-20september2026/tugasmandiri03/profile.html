@@ -92,7 +92,7 @@
             width: 300px;
             max-width: 100%;
             background: #000;
-            border: 2px solid #37474f;
+            border: 2px solid #000000;
         }
         .koleksi {
             display: grid;
@@ -172,17 +172,20 @@
 
         <!-- Multimedia: video, koleksi foto, lampiran download -->
         <div class="multimedia">
-            <video controls poster="images/images.png">
+            <fieldset class="video">
+                <legend>Video Portofolio</legend>
+                <video controls poster="images/images.png">
                 <source src="images/GYM-EDIT.mp4" type="video/mp4">
-                Browser kamu tidak mendukung tag video.
-            </video>
+                </video>
+            </fieldset>
 
-            <div class="koleksi">
+            <fieldset class="koleksi">
+                <legend>Koleksi Foto</legend>
                 <img src="images/foto 1.jpg" alt="Koleksi foto 1">
                 <img src="images/foto 4.jpg" alt="Koleksi foto 2">
                 <img src="images/foto 2.jpeg" alt="Koleksi foto 3">
                 <img src="images/foto 3.jpg" alt="Koleksi foto 4">
-            </div>
+            </fieldset>
 
             <fieldset class="lampiran">
                 <legend>Attachments</legend>
