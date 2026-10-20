@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: aquamarine;
+            padding: 10px;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: yellow;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid #000;
+        }
+        header img { width: 90px; height: 90px; }
+        header h1 { font-size: 26px; }
+        header p { font-size: 14px; font-weight: normal; }
+
+        nav {
+            background-color: #76ff03;
+            padding: 15px;
+            font-weight: bold;
+            border: 1px solid #64dd17;
+        }
+        nav a {
+            color: #000;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+        nav a:hover { text-decoration: underline; }
+
+        .main-content {
+            display: flex;
+            gap: 10px;
+        }
+
+        article {
+            flex: 3;
+            background-color: #ffe082;
+            padding: 15px;
+            border: 1px solid #ffd54f;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        section {
+            background-color: #ffe57f;
+            padding: 15px;
+            border: 1px solid #ffca28;
+        }
+        section h2 { font-size: 18px; margin-bottom: 6px; }
+        section p { line-height: 1.5; }
+
+        aside {
+            flex: 1;
+            background-color: #00bcd4;
+            padding: 15px;
+            border: 1px solid #00acc1;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        aside h3 { font-size: 16px; }
+        aside img { width: 100%; height: auto; border: 2px solid #fff; display: block; }
+        aside figcaption { font-size: 12px; margin-top: 3px; }
+
+        footer {
+            background-color: #ffeb3b;
+            padding: 20px;
+            font-weight: bold;
+            border: 1px solid #fbc02d;
+        }
+
+        @media (max-width: 700px) {
+            .main-content { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header: logo dan nama web -->
+        <header>
+            <img src="images/logo.svg" alt="Logo Web Dhezan">
+            <div>
+                <h1>Web Belajar Dhezan</h1>
+                <p>Catatan praktikum Desain UI/UX &amp; Pemrograman Web</p>
+            </div>
+        </header>
+
+        <!-- Nav: menu -->
+        <nav>
+            <a href="index.html" target="_top">Beranda</a>
+            <a href="layout.html">Layout</a>
+            <a href="profile.html">Profile</a>
+            <a href="praktikum1.html">Praktikum 1</a>
+            <a href="praktikum2.html">Praktikum 2</a>
+        </nav>
+
+        <div class="main-content">
+            <!-- Article: konten artikel yang terdiri atas section -->
+            <article>
+                <section>
+                    <h2>Apa itu HTML5 Layout?</h2>
+                    <p>HTML5 menyediakan tag semantik seperti header, nav, article, section, aside, dan footer. Tag ini membantu kita menyusun halaman dengan struktur yang jelas dan mudah dibaca, baik oleh manusia maupun mesin pencari.</p>
+                </section>
+                <section>
+                    <h2>Fungsi Tiap Tag</h2>
+                    <p>Header berisi judul atau logo, nav berisi menu, article berisi konten utama, section membagi isi artikel menjadi beberapa bagian, aside berisi konten pendamping, dan footer berisi informasi penutup.</p>
+                </section>
+                <section>
+                    <h2>Keuntungan Memakai Tag Semantik</h2>
+                    <p>Kode lebih rapi, struktur halaman lebih mudah dipahami, dan lebih ramah untuk pembaca layar. Dibandingkan frameset, layout HTML5 juga masih didukung penuh oleh browser modern.</p>
+                </section>
+            </article>
+
+            <!-- Aside: konten multimedia foto -->
+            <aside>
+                <h3>Galeri Foto</h3>
+                <figure>
+                    <img src="images/foto1.svg" alt="Foto 1">
+                    <figcaption>Foto 1</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/foto2.svg" alt="Foto 2">
+                    <figcaption>Foto 2</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/foto3.svg" alt="Foto 3">
+                    <figcaption>Foto 3</figcaption>
+                </figure>
+            </aside>
+        </div>
+
+        <footer>
+            &copy; 2026 Dhezan Shakti Al Hajj - Teknik Informatika STT-NF
+        </footer>
+    </div>
+</body>
+</html>
