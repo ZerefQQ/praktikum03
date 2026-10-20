@@ -87,25 +87,34 @@
             gap: 15px;
             padding: 0 20px 20px;
             align-items: flex-start;
+            border-top: 2px solid #000000;
         }
         .multimedia video {
             width: 300px;
             max-width: 100%;
             background: #000;
             border: 2px solid #000000;
+
         }
+        fieldset.video {
+            border: 2px solid #000000;
+            padding: 8px 12px;
+            flex: 1;
+            font-size: 14px;
+        }
+        
         .koleksi {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 8px;
-            border: 2px solid #37474f;
+            border: 2px solid #000000;
             padding: 8px;
         }
         .koleksi img { width: 110px; height: 85px; object-fit: cover; display: block; }
         .koleksi img:nth-child(2) { transform: translateY(5px); }
 
         fieldset.lampiran {
-            border: 2px solid #37474f;
+            border: 2px solid #000000;
             padding: 8px 12px;
             flex: 1;
             font-size: 14px;
